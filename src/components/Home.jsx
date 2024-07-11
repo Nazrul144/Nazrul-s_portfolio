@@ -54,7 +54,33 @@ const Home = () => {
                     <Link to='https://www.facebook.com/profile.php?id=100007196595674' target='_blank'><FaFacebook /></Link>
                     <Link to='https://x.com/Nazrul211002144' target='_blank'><FaTwitter /></Link>
                 </div>
-            </div>     
+            </div>  
+
+            {/*Showing Stat*/}
+            <div className="stats shadow flex flex-col md:flex-row justify-center gap-4 mt-8 mb-4">
+              
+                <div className="stat place-items-center">
+                    <div className="stat-value text-secondary">Junior</div>
+                    <div className="stat-desc text-secondary text-xl">Web Developer</div>
+                </div>
+
+                <div className="stat place-items-center">
+                    <div className="stat-value text-secondary">18</div>
+                    <div className="stat-desc text-secondary text-xl">Projects Completed</div>
+                </div>
+
+                <div className="stat place-items-center">
+                    <div className="stat-value text-secondary">6</div>
+                    <div className="stat-desc text-secondary text-xl">Technologies Mastered</div>
+                </div>
+              
+                <div className="stat place-items-center">
+                    <div className="stat-value text-secondary">285</div>
+                    <div className="stat-desc text-secondary text-xl">Total Commits</div>
+                </div>
+
+               
+                </div>   
 
         </div>
     );
