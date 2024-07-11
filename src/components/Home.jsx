@@ -1,7 +1,15 @@
 import React, { useState } from 'react';
 import coverImage from '../../public/cover1.png'
-const Home = () => {
+import { FiDownload } from "react-icons/fi";
 
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { FaTwitter } from "react-icons/fa6";
+import { FaFacebook } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
+const Home = () => {
     const [showFullText, setShowFullText] = useState(false)
 
     const textToggle = ()=>{
@@ -35,12 +43,16 @@ const Home = () => {
             </div>
 
             {/*CV Download button with social links*/}  
-            <div>
+            <div className='flex items-center gap-8 lg:gap-16'>
                 <div>
-                   <button className='border-[1px] rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2'>Download CV</button>
+                   <button className='border-[1px] rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center'>Download CV <FiDownload className='font-extrabold' /></button>
                 </div>
-                <div>
-
+                <div className='flex gap-4 text-xl '>
+                    <Link to='https://github.com/Nazrul144' target='_blank'><FaGithub /></Link>
+                    <Link to='https://www.linkedin.com/in/nazrul-islam-a6080730b' target='_blank'><FaLinkedinIn /></Link>
+                    <Link to='https://www.youtube.com/channel/UC2PSgQ5bDN65BFqpJ2VgUSA' target='_blank'><FaYoutube /></Link>
+                    <Link to='https://www.facebook.com/profile.php?id=100007196595674' target='_blank'><FaFacebook /></Link>
+                    <Link to='https://x.com/Nazrul211002144' target='_blank'><FaTwitter /></Link>
                 </div>
             </div>     
 
