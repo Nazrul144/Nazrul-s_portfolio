@@ -58,24 +58,24 @@ const Portfolio = () => {
                  
                     <div className='lg:w-2/4 mx-auto mt-12 max-h-screen'>
                         <div className='text-center mb-2'>
-                            <button onClick={experience} className='w-full p-2 bg-green-300 rounded-lg'>Experience</button>
+                            <button onClick={experience} className='w-full p-2 bg-green-300 rounded-lg font-bold font-Open'>Experience</button>
                         </div>
                         <div className=' text-center mb-2'>
-                            <button onClick={education} className='w-full p-2 bg-green-300 rounded-lg'>Education</button>
+                            <button onClick={education} className='w-full p-2 bg-green-300 rounded-lg font-bold font-Open'>Education</button>
                         </div>
                         <div className=' text-center mb-2'>
-                            <button onClick={skills} className='w-full p-2 bg-green-300 rounded-lg'>Skills</button>
+                            <button onClick={skills} className='w-full p-2 bg-green-300 rounded-lg font-bold font-Open'>Skills</button>
                         </div>
                         <div className=' text-center mb-2'>
-                            <button onClick={about} className='w-full p-2 bg-green-300 rounded-lg'>About me</button>
+                            <button onClick={about} className='w-full p-2 bg-green-300 rounded-lg font-bold font-Open'>About me</button>
                         </div>
                     </div>
                 </div>
                 <div className='lg:w-3/5 '>
                     {activeSection === 'experience' && (
                         <>
-                            <h1 className='text-3xl font-Open text-white font-bold ml-8'>My Experience</h1>
-                            <p className='font-Open text-white ml-8 mt-4 text-justify mb-2'>As a junior web developer, I have some experiences on this field. I also have other experiences that I have gained from my University. </p>
+                            <h1 className='text-3xl font-Open text-white font-bold mr-2 ml-2 lg:ml-8'>My Experience</h1>
+                            <p className='font-Open text-white ml-2 mr-2 lg:ml-8 mt-4 text-justify mb-2'>As a junior web developer, I have some experiences on this field. I also have other experiences that I have gained from my University. </p>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8 bg-gray-900 text-white text-justify font-Open">
                                 <div className="flex flex-col items-start p-6 bg-gray-800 rounded-lg shadow-md">
@@ -124,8 +124,8 @@ const Portfolio = () => {
 
                     {activeSection === 'education' && (
                         <>
-                            <h1 className='text-3xl font-Open text-white font-bold ml-8'>My Education</h1>
-                            <p className='font-Open text-white ml-8 mt-4 text-justify mb-2'>Here are my academic achievements and awards that highlight my educational journey.</p>
+                            <h1 className='text-3xl font-Open text-white font-bold ml-2 lg:ml-8'>My Education</h1>
+                            <p className='font-Open text-white ml-2 mr-2 lg:ml-8 mt-4 text-justify mb-2'>Here are my academic achievements and awards that highlight my educational journey.</p>
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-8 bg-gray-900 text-white text-justify font-Open">
                                 <div className="flex flex-col items-start p-6 bg-gray-800 rounded-lg shadow-md">
                                   <div>
@@ -213,8 +213,8 @@ const Portfolio = () => {
                     {
                         activeSection === 'skills' && (
                             <>
-                             <h1 className='text-3xl font-Open text-white font-bold ml-8'>My Skills</h1>
-                            <p className='font-Open text-white ml-8 mt-4 text-justify mb-2'>I have developed a comprehensive skill set that spans advanced front-end development with:</p>
+                             <h1 className='text-3xl font-Open text-white font-bold ml-2 lg:ml-8'>My Skills</h1>
+                            <p className='font-Open text-white ml-2 mr-2 lg:ml-8 mt-4 text-justify mb-2'>I have developed a comprehensive skill set that spans advanced front-end development with:</p>
                             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 p-8 bg-gray-900 text-white text-justify font-Open">
                                 <div className="flex flex-col items-start p-6 bg-gray-800 rounded-lg shadow-md">
                                    <div>
