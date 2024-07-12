@@ -8,6 +8,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaTwitter } from "react-icons/fa6";
 import { FaFacebook } from "react-icons/fa";
 import { Link } from 'react-router-dom';
+import resume from '../assets/resume.pdf'
 
 const Home = () => {
     const [showFullText, setShowFullText] = useState(false)
@@ -45,7 +46,9 @@ const Home = () => {
             {/*CV Download button with social links*/}  
             <div className='flex items-center gap-8 lg:gap-16'>
                 <div>
-                   <button className='border-[1px] text-white rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center'>Download CV <FiDownload className='font-extrabold' /></button>
+                   <button className='border-[1px] text-white rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center'>
+                   <a className='flex items-center gap-2' href={resume} download='resume'>Download CV <FiDownload className='font-extrabold' /></a>
+                   </button>
                 </div>
                 <div className='flex gap-4 text-xl text-white'>
                     <Link to='https://github.com/Nazrul144' target='_blank'><FaGithub /></Link>
