@@ -365,7 +365,7 @@ const Portfolio = () => {
         </span>
             </h1>
            </div>
-            <div className='grid lg:grid-cols-3 gap-4 lg:px-20'>
+            <div className='grid lg:grid-cols-3 gap-4 lg:px-20 mt-16'>
                
                 {/*Project-1*/}
                     <div className="card bg-base-100 shadow-xl">

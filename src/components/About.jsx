@@ -3,11 +3,10 @@ import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 
 const About = () => {
     return (
-        <div>
-            <h1>This is a about section</h1>
-            <div>
+        <div className='lg:px-20'>
+            <div className='w-full mx-auto'>
                             <h1 className='text-3xl font-Open text-white font-bold ml-2 lg:ml-8'>About me.</h1>
-                            <p className='font-Open text-white text-justify lg:ml-8 ml-2 mr-2 mt-4'>Hi, I am Nazrul Islam, a passionate junior web developer with a keen interest in creating dynamic and user-friendly web applications. I have a solid foundation in HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, Node.js, and MongoDB. I enjoy turning ideas into functional and visually appealing digital experiences.</p>
+                            <p className='font-Open text-white text-justify lg:ml-8 ml-2 mr-2 mt-4 lg:w-3/6'>Hi, I am Nazrul Islam, a passionate junior web developer with a keen interest in creating dynamic and user-friendly web applications. I have a solid foundation in HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, Node.js, and MongoDB. I enjoy turning ideas into functional and visually appealing digital experiences. I'm always eager to learn new technologies and improve my skills. Feel free to check out my repositories and connect with me for collaboration opportunities!</p>
                             <div className='lg:flex gap-4 text-white font-Open ml-2 lg:ml-4 mt-4'>
     <div className="bg-gray-800 p-4 rounded-lg shadow-md">
         <h1 className="text-xl font-bold mb-2 text-green-400">Personal Information</h1>
@@ -74,7 +73,7 @@ const About = () => {
     </div>
                             </div>
 
-                            </div>
+            </div>
         </div>
     );
 };
