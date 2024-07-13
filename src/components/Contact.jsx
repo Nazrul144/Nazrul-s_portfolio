@@ -1,10 +1,16 @@
-import React, { useRef, useState } from 'react';
+import React, {  useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import Swal from 'sweetalert2'
 import { IoCallOutline } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa';
 import { Helmet } from 'react-helmet-async';
+
+//Particle:
+import { useEffect } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim"; 
+
 
 const Contact = () => {
 
@@ -33,6 +39,24 @@ const Contact = () => {
             },
           );
       };
+
+            //Particle:
+            const [ init, setInit ] = useState(false);
+
+            useEffect(() => {
+                initParticlesEngine(async (engine) => {
+                  
+                    await loadSlim(engine);
+                    //await loadBasic(engine);
+                }).then(() => {
+                    setInit(true);
+                });
+            }, []);
+        
+            const particlesLoaded = (container) => {
+                console.log(container);
+            };
+        //Particle End
     
     return (
         <div className='lg:px-20'>
@@ -41,6 +65,84 @@ const Contact = () => {
                     Portfolio | Contact
                 </title>
              </Helmet>
+
+                   {/*Particle Start*/}
+                   <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={{
+                background: {
+                    color: {
+                        value: "gray",
+                    },
+                },
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        push: {
+                            quantity: 4,
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff",
+                    },
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.1,
+                        width: 1,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 0.1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800,
+                        },
+                        value: 80,
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 5 },
+                    },
+                },
+                detectRetina: true,
+            }}
+        />
+             {/*Particle End*/}
+
+
             <div className='lg:flex gap-4 mt-16 mb-16'>
                 <div className='bg-gray-700 lg:w-6/12 rounded-lg flex justify-center items-center'>
                     <form className='lg:bg-gray-600 shadow-2xl lg:p-12 rounded-lg animate__animated animate__zoomIn' ref={form} onSubmit={sendEmail}>

@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 
+//Particle:
+import { useEffect } from "react";
+import Particles, { initParticlesEngine } from "@tsparticles/react";
+import { loadSlim } from "@tsparticles/slim"; 
+
+
 const About = () => {
+        //Particle:
+        const [ init, setInit ] = useState(false);
+
+        useEffect(() => {
+            initParticlesEngine(async (engine) => {
+              
+                await loadSlim(engine);
+                //await loadBasic(engine);
+            }).then(() => {
+                setInit(true);
+            });
+        }, []);
+    
+        const particlesLoaded = (container) => {
+            console.log(container);
+        };
+    //Particle End
+
+
+
     return (
         <div className='lg:px-20 '>
               <Helmet>
@@ -11,6 +37,83 @@ const About = () => {
                     Portfolio | About
                 </title>
              </Helmet>
+               {/*Particle Start*/}
+               <Particles
+            id="tsparticles"
+            particlesLoaded={particlesLoaded}
+            options={{
+                background: {
+                    color: {
+                        value: "gray",
+                    },
+                },
+                fpsLimit: 120,
+                interactivity: {
+                    events: {
+                        onClick: {
+                            enable: true,
+                            mode: "push",
+                        },
+                        onHover: {
+                            enable: true,
+                            mode: "repulse",
+                        },
+                        resize: true,
+                    },
+                    modes: {
+                        push: {
+                            quantity: 4,
+                        },
+                        repulse: {
+                            distance: 200,
+                            duration: 0.4,
+                        },
+                    },
+                },
+                particles: {
+                    color: {
+                        value: "#ffffff",
+                    },
+                    links: {
+                        color: "#ffffff",
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.1,
+                        width: 1,
+                    },
+                    move: {
+                        direction: "none",
+                        enable: true,
+                        outModes: {
+                            default: "bounce",
+                        },
+                        random: false,
+                        speed: 0.1,
+                        straight: false,
+                    },
+                    number: {
+                        density: {
+                            enable: true,
+                            area: 800,
+                        },
+                        value: 80,
+                    },
+                    opacity: {
+                        value: 0.5,
+                    },
+                    shape: {
+                        type: "circle",
+                    },
+                    size: {
+                        value: { min: 1, max: 5 },
+                    },
+                },
+                detectRetina: true,
+            }}
+        />
+             {/*Particle End*/}
+
+
             <div className='w-full mx-auto'>       
             <div className='ml-8'>
            <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal', fontSize:'2rem' }}>
