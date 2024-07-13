@@ -11,10 +11,7 @@ import { Link } from 'react-router-dom';
 import resume from '../assets/resume.pdf'
 import { MotionAnimate } from 'react-motion-animate'
 import { Fade, Slide } from 'react-awesome-reveal';
-
-
-
-
+import { Helmet } from 'react-helmet-async';
 
 
 const Home = () => {
@@ -25,12 +22,13 @@ const Home = () => {
     }
 
 
-
-
     return (
         <div className='lg:px-20 px-2'>
-
-
+             <Helmet>
+                <title>
+                    Portfolio | Home
+                </title>
+             </Helmet>
 
             <div className=' flex flex-col-reverse lg:flex-row gap-12 mt-12 lg:mt-24'>
                 <div className=' lg:w-3/6 font-Open'>
@@ -42,7 +40,7 @@ const Home = () => {
              
              
                     <Fade cascade damping={0.5}>
-                    <p className='text-justify text-white'>
+                    <p className='text-justify text-white animate__animated animate__fadeInDown'>
                         
                         "Hi, I’m Nazrul Islam, a passionate junior web developer from Bangladesh. Crafting websites isn't just a job for me—it's my passion. I specialize in building seamless, user-friendly web applications using cutting-edge technologies such as HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, Express, and MongoDB.
                        {
@@ -55,7 +53,7 @@ const Home = () => {
                         )
                        }
                         </p>
-</Fade>
+                    </Fade>
                    
                     <button onClick={textToggle} className="px-4 text-white py-2 text-lg font-semibold dark:border-gray-800 hover:bg-[orange] duration-1000 ease-in-out hover:text-black border-[1px] rounded-lg border-green-400 p-2 mt-4">
                         {showFullText ? "See less" : "Read More"}

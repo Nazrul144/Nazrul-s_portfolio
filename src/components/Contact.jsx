@@ -4,6 +4,7 @@ import Swal from 'sweetalert2'
 import { IoCallOutline } from 'react-icons/io5';
 import { MdEmail } from 'react-icons/md';
 import { FaFacebook, FaGithub, FaLinkedinIn } from 'react-icons/fa';
+import { Helmet } from 'react-helmet-async';
 
 const Contact = () => {
 
@@ -35,8 +36,11 @@ const Contact = () => {
     
     return (
         <div className='lg:px-20'>
-         
-            
+           <Helmet>
+                <title>
+                    Portfolio | Contact
+                </title>
+             </Helmet>
             <div className='lg:flex gap-4 mt-16 mb-16'>
                 <div className='bg-gray-700 lg:w-6/12 rounded-lg flex justify-center items-center'>
                     <form className='lg:bg-gray-600 shadow-2xl lg:p-12 rounded-lg animate__animated animate__zoomIn' ref={form} onSubmit={sendEmail}>

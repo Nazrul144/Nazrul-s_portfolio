@@ -1,13 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { FaFacebook, FaLinkedinIn } from 'react-icons/fa';
 import { Typewriter } from 'react-simple-typewriter';
 
 const About = () => {
     return (
         <div className='lg:px-20 '>
-            <div className='w-full mx-auto'>
-                     
-                            <div className='ml-8'>
+              <Helmet>
+                <title>
+                    Portfolio | About
+                </title>
+             </Helmet>
+            <div className='w-full mx-auto'>       
+            <div className='ml-8'>
            <h1 style={{ paddingTop: '5rem', margin: 'auto 0', fontWeight: 'normal', fontSize:'2rem' }}>
       
         <span style={{ color: 'gold', fontWeight: 'bold' }}>
@@ -20,14 +25,13 @@ const About = () => {
             typeSpeed={70}
             deleteSpeed={50}
             delaySpeed={1000}
-            
           />
         </span>
             </h1>
                             </div>
-                            <p className='font-Open text-white text-justify lg:ml-8 ml-2 mr-2 mt-4 lg:w-3/6'>Hi, I am Nazrul Islam, a passionate junior web developer with a keen interest in creating dynamic and user-friendly web applications. I have a solid foundation in HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, Node.js, and MongoDB. I enjoy turning ideas into functional and visually appealing digital experiences. I'm always eager to learn new technologies and improve my skills. Feel free to check out my repositories and connect with me for collaboration opportunities!</p>
+                            <p className='font-Open text-white text-justify lg:ml-8 ml-2 mr-2 mt-4 lg:w-3/6 animate__animated animate__zoomIn'>Hi, I am Nazrul Islam, a passionate junior web developer with a keen interest in creating dynamic and user-friendly web applications. I have a solid foundation in HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, Node.js, and MongoDB. I enjoy turning ideas into functional and visually appealing digital experiences. I'm always eager to learn new technologies and improve my skills. Feel free to check out my repositories and connect with me for collaboration opportunities!</p>
                             <div className='lg:flex gap-4 text-white font-Open ml-2 lg:ml-4 mt-4'>
-    <div className="bg-gray-800 p-4 rounded-lg shadow-md">
+    <div className="bg-gray-800 p-4 rounded-lg shadow-md animate__animated animate__lightSpeedInLeft">
         <h1 className="text-xl font-bold mb-2 text-green-400">Personal Information</h1>
         <table className="table-auto w-full text-left">
             <tbody>
@@ -58,7 +62,7 @@ const About = () => {
             </tbody>
         </table>
     </div>
-    <div className="bg-gray-800 p-2 rounded-lg shadow-md">
+    <div className="bg-gray-800 p-2 rounded-lg shadow-md animate__animated animate__lightSpeedInRight">
         <h1 className="text-xl font-bold mb-2 text-sky-400">Contact Information</h1>
         <table className="table-auto w-full text-left">
             <tbody>
