@@ -1,0 +1,69 @@
+[
+    {
+      "project_name": "Regal House",
+      "project_id": "001",
+      "features": [
+        "Fully responsive design",
+        "Dynamic content loading",
+        "SEO optimized"
+      ],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React"
+      ],
+      "project_image": "https://i.ibb.co/VCynN4g/house.jpg",
+      "description": "Regal House streamlines property management with an intuitive platform for managing estates and apartments. Our tools simplify listing properties, handling bookings, and tenant interactions. Join us at Regal House to make property management effortless and efficient.",
+      "live_link": "https://royal-house-assignment-9.web.app",
+      "github_link": "https://github.com/Nazrul144/royal-house-assignment-9"
+    },
+
+
+
+    {
+      "project_name": "Holiday Hive",
+      "project_id": "002",
+      "features": [
+        "User authentication",
+        "Filtering by price",
+        "CRUD Operation"
+      ],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB"
+      ],
+      "project_image": "https://i.ibb.co/S7DzPy9/hotel.jpg",
+      "description": "Holiday Hive streamlines holiday planning with a wide selection of accommodations, from luxurious resorts to cozy cottages. Our intuitive interface makes it easy to discover, plan, and book your ideal vacation.",
+      "live_link": "https://hotel-booking-f7554.web.app",
+      "github_link": "https://github.com/Nazrul144/hotel-booking-client-side?tab=readme-ov-file"
+    },
+
+    {
+      "project_name": "CraftedEcoChic",
+      "project_id": "003",
+      "features": [
+        "Dark Mode (theme)",
+        "Filtering Functionality",
+        "Authentication"
+      ],
+      "skills": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "React",
+        "Node.js",
+        "Socket.io"
+      ],
+      "project_image": "https://i.ibb.co/BCb7tzw/furniture.jpg",
+      "description": "CraftedEcoChic showcases eco-friendly products like chairs, tables, beds, and home décor, all made from sustainable materials. Our platform, built with HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, and Slick Slider, offers a seamless browsing experience focused on environmental consciousness and craftsmanship.",
+      "live_link": "https://assignment-10-b4b97.web.app",
+      "github_link": "https://github.com/Nazrul144/assignment-10-client-side?tab=readme-ov-file"
+    }
+  ]
+  

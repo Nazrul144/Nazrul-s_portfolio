@@ -33,11 +33,24 @@ import { Helmet } from 'react-helmet-async';
 import { useEffect } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim"; 
+import Card from './Card';
 
 
 
 const Portfolio = () => {
     const [activeSection, setActiveSection] = useState('');
+    const [projects, setProjects] = useState([])
+
+    //Fetching project data:
+    useEffect(()=>{
+        fetch('project.json')
+        .then(res =>res.json())
+        .then(data =>{
+            setProjects(data)
+        })
+    },[])
+
+    console.log(projects);
 
     const experience = () => {
         setActiveSection('experience');
@@ -512,128 +525,13 @@ const Portfolio = () => {
                     </span>
                 </h1>
             </div>
-            <div className='grid lg:grid-cols-3 gap-4 lg:px-20 mt-16'>
-
-                {/*Project-1*/}
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-5 pt-5">
-                        <img
-                            src={house}
-                            alt="Shoes"
-                            className="rounded-xl" />
-                    </figure>
-                    <div className=" ml-4 items-center text-center">
-                        <h2 className="card-title font-bold text-xl"> <FaArrowRight className=" text-black" />Regal House</h2>
-                    </div>
-                    <div className='ml-4 font-Open mt-2'>
-                        <h1 className='font-bold text-sky-500'># Core Features:</h1>
-                        <li className='font-bold'>Authentication</li>
-                        <li className='font-bold'>Routing</li>
-                        <li className='font-bold'>Good Usability</li>
-                    </div>
-                    <div>
-                        <h1 className='font-bold text-sky-500 ml-4'># Used Technologies:</h1>
-                        <h1 className='flex gap-2 text-2xl ml-4 mt-4'><FaHtml5 /> <RiTailwindCssLine /> <TbBrandJavascript /> <FaReact /><RiFirebaseFill />
-                            <FaNode /> <SiMongodb />
-                        </h1>
-                    </div>
-                    <div className='mt-4'>
-                        <span className='font-bold ml-4 text-sky-400'># Description:</span>
-                        <p className='ml-4 text-justify mr-4 pb-2'>
-
-                            Regal House streamlines property management with an intuitive platform for managing estates and apartments. Our tools simplify listing properties, handling bookings, and tenant interactions. Join us at Regal House to make property management effortless and efficient.
-                        </p>
-                        <div className='ml-4'>
-                            <li ><a className='text-sky-400 font-bold' href="https://royal-house-assignment-9.web.app" target='_blank'>Live Link</a></li>
-                            <li><a className='text-sky-400 font-bold' href="https://github.com/Nazrul144/royal-house-assignment-9" target='_blank'>Github Link</a></li>
-                        </div>
-                    </div>
-
-                </div>
-
-                {/*Project-2*/}
-
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-5 pt-5">
-                        <img
-                            src={furniture}
-                            alt="Shoes"
-                            className="rounded-xl" />
-                    </figure>
-                    <div className=" ml-4 items-center text-center">
-                        <h2 className="card-title font-bold text-xl"> <FaArrowRight className=" text-black" />CraftedEcoChic</h2>
-                    </div>
-                    <div className='ml-4 font-Open mt-2'>
-                        <h1 className='font-bold text-sky-500'># Core Features:</h1>
-                        <li className='font-bold'>Dark Mode (theme)</li>
-                        <li className='font-bold'>Authentication</li>
-                        <li className='font-bold'>Filtering Functionality</li>
-
-
-
-
-                    </div>
-                    <div>
-                        <h1 className='font-bold text-sky-500 ml-4'># Used Technologies:</h1>
-                        <h1 className='flex gap-2 text-2xl ml-4 mt-4'><FaHtml5 /> <RiTailwindCssLine /> <TbBrandJavascript /> <FaReact /><RiFirebaseFill />
-                            <FaNode /> <SiMongodb />
-                        </h1>
-                    </div>
-                    <div className='mt-4'>
-                        <span className='font-bold ml-4 text-sky-400'># Description:</span>
-                        <p className='ml-4 text-justify mr-4 pb-2'>
-
-                            CraftedEcoChic showcases eco-friendly products like chairs, tables, beds, and home décor, all made from sustainable materials. Our platform, built with HTML, CSS, Tailwind CSS, JavaScript, React, Firebase, and Slick Slider, offers a seamless browsing experience focused on environmental consciousness and craftsmanship.
-                        </p>
-                        <div className='ml-4'>
-                            <li ><a className='text-sky-400 font-bold' href="https://assignment-10-b4b97.web.app" target='_blank'>Live Link</a></li>
-                            <li><a className='text-sky-400 font-bold' href="https://github.com/Nazrul144/assignment-10-client-side?tab=readme-ov-file" target='_blank'>Github Link</a></li>
-                        </div>
-                    </div>
-
-                </div>
-                {/*Project-3*/}
-
-                <div className="card bg-base-100 shadow-xl">
-                    <figure className="px-5 pt-5">
-                        <img
-                            src={hotel}
-                            alt="Shoes"
-                            className="rounded-xl" />
-                    </figure>
-                    <div className=" ml-4 items-center text-center">
-                        <h2 className="card-title font-bold text-xl"> <FaArrowRight className=" text-black" />Holiday Hive</h2>
-                    </div>
-                    <div className='ml-4 font-Open mt-2'>
-                        <h1 className='font-bold text-sky-500'># Core Features:</h1>
-                        <li className='font-bold'>Authentication</li>
-                        <li className='font-bold'>Filtering by price</li>
-                        <li className='font-bold'>CRUD Operations </li>
-
-
-
-                    </div>
-                    <div>
-                        <h1 className='font-bold text-sky-500 ml-4'># Used Technologies:</h1>
-                        <h1 className='flex gap-2 text-2xl ml-4 mt-4'><FaHtml5 /> <RiTailwindCssLine /> <TbBrandJavascript /> <FaReact /><RiFirebaseFill />
-                            <FaNode /> <SiMongodb />
-                        </h1>
-                    </div>
-                    <div className='mt-4'>
-                        <span className='font-bold ml-4 text-sky-400'># Description:</span>
-                        <p className='ml-4 text-justify mr-4 pb-2'>
-
-                            Holiday Hive streamlines holiday planning with a wide selection of accommodations, from luxurious resorts to cozy cottages. Our intuitive interface makes it easy to discover, plan, and book your ideal vacation.
-                        </p>
-                        <div className='ml-4'>
-                            <li ><a className='text-sky-400 font-bold' href="https://hotel-booking-f7554.web.app/" target='_blank'>Live Link</a></li>
-                            <li><a className='text-sky-400 font-bold' href="https://github.com/Nazrul144/hotel-booking-client-side?tab=readme-ov-file" target='_blank'>Github Link</a></li>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+    
+                  <div className='lg:px-20 grid lg:grid-cols-3 gap-4 mt-8'>
+                      {/*Project mapping*/}
+                      {
+                        projects?.map(project => <Card project={project}></Card>)
+                    }
+                  </div>
         </div>
     );
 };

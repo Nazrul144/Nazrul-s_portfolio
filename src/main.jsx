@@ -14,6 +14,7 @@ import Service from './components/Service.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
 import { HelmetProvider } from 'react-helmet-async';
+import ViewDetails from './components/ViewDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,19 @@ const router = createBrowserRouter([
         path: 'portfolio',
         element: <Portfolio></Portfolio>
       },
+      {
+        path: '/viewDetails/:project_id',
+        element: <ViewDetails />,
+        loader: ({ params }) => 
+          fetch(`/project.json`)
+            .then(response => response.json())
+            .then(data => data.find(item => item.project_id === params.project_id))
+            .catch(error => {
+              console.error('Error fetching project data:', error);
+              return {}; 
+            })
+      },
+      
       {
         path: 'contact',
         element: <Contact></Contact>

@@ -158,7 +158,7 @@ const Home = () => {
                         </p>
                     </Fade>
 
-                    <button onClick={textToggle} className="px-4 text-white py-2 text-lg font-semibold dark:border-gray-800 hover:bg-[orange] duration-1000 ease-in-out hover:text-black border-[1px] rounded-lg border-green-400 p-2 mt-4">
+                    <button onClick={textToggle} className="px-4 animate__animated animate__zoomIn text-white py-2 text-lg font-semibold dark:border-gray-800 hover:bg-[orange] duration-1000 ease-in-out hover:text-black border-[1px] rounded-lg border-green-400 p-2 mt-4">
                         {showFullText ? "See less" : "Read More"}
                     </button>
                 </div>
@@ -177,11 +177,11 @@ const Home = () => {
             {/*CV Download button with social links*/}
             <div className='flex items-center gap-8 lg:gap-16'>
                 <div>
-                    <button className='border-[1px] text-white rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center'>
+                    <button className='border-[1px] text-white rounded-lg border-green-400 p-2 bg-transparent font-bold mt-2 flex gap-2 items-center animate__animated animate__lightSpeedInLeft'>
                         <a className='flex items-center gap-2' href={resume} download='resume'>Download CV <FiDownload className='font-extrabold' /></a>
                     </button>
                 </div>
-                <div className='flex gap-4 text-xl text-white'>
+                <div className='flex gap-4 text-xl text-white animate__animated animate__lightSpeedInRight'>
                     <Link to='https://github.com/Nazrul144' target='_blank'><FaGithub /></Link>
                     <Link to='https://www.linkedin.com/in/nazrul-islam-a6080730b' target='_blank'><FaLinkedinIn /></Link>
                     <Link to='https://www.youtube.com/channel/UC2PSgQ5bDN65BFqpJ2VgUSA' target='_blank'><FaYoutube /></Link>
