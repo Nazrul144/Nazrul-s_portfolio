@@ -169,9 +169,6 @@ const Home = () => {
                 </div>
 
 
-
-
-
             </div>
 
             {/*CV Download button with social links*/}
